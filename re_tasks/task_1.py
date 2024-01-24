@@ -11,18 +11,13 @@ def generate_text():
         sentence = fake.sentence()
         email = fake.ascii_email()
         words = sentence.split()
-        main_text += (
-            " ".join(
-                [word if (i + 1) % 3 != 0 else email for i, word in enumerate(words)]
-            )
-            + " "
-        )
+        main_text += " ".join([word if (i + 1) % 3 != 0 else email for i, word in enumerate(words)]) + " "
 
     return main_text
 
 
 def find_email_is_text(text):
-    return re.findall(r"\S+@.\S+", text)
+    return re.findall(r"\b[A-z0-9._%+-]+@[A-z0-9.-]+\.[A-Z|a-z]{2,}\b(?!.*[!?])", text)
 
 
 if __name__ == "__main__":
