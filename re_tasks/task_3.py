@@ -1,6 +1,6 @@
 import re
 
-from task_1 import generate_text, find_email_is_text
+from re_tasks.task_1 import generate_text, find_email_is_text
 
 
 def take_name_and_domain(text: str) -> list:
