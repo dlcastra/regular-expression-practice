@@ -3,7 +3,7 @@ from re_tasks.task_4 import is_valid_phone_number
 
 def test_is_valid_phone_number():
     valid_phone_number = "+38 (066) 7209-7209"
-    invalid_phone_number = "+38 (066) 7209-7209-7209"  # To many numbers
+    invalid_phone_number = "+38 (066) 7209-7209-7209"  # Too many numbers
 
     # Positive cases
     assert is_valid_phone_number(valid_phone_number) is True
